@@ -1,0 +1,249 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    padding: 10px;
+    min-width: 650px;
+}
+
+header
+{
+    display: flex;
+    justify-content: center;
+
+}
+
+header h1
+{
+    /*border: 1px solid black;*/
+    padding: 10px;
+    transform: skew(-20deg);
+    border-radius: 0 15px 0 15px;
+
+    background-color: #FFD63A;
+
+    /*
+    display: flex;
+    justify-content: center;
+    */
+}
+
+header h1 span
+{
+    padding: 0 10px;
+    height: 10px;
+    /*background-color: white;*/
+}
+
+header h1 span.m3
+{
+    color: #FF0B55;
+    background-color: black;
+}
+
+header h1 span.m2
+{
+    color: black;
+    background-color: white;
+}
+
+header h1 span.m1
+{
+    background-color: #FF0B55;
+    border-radius: 0 15px 0 0;
+}
+
+header h1 span.m1:first-child
+{
+    border-radius: 0 0 0 15px;
+}
+
+header h1 span.may
+{
+    margin: 0;
+    background-color: white;
+    color: #FFD63A;
+}
+
+header h1 span.men
+{
+    border: 1px solid white;
+    color: white;
+}
+
+header h1 span.mao
+{
+    background-color: black;
+    color: white;
+}
+
+section
+{
+    margin-top: 20px;
+}
+
+section article.tablero
+{
+    min-height: 150px;
+}
+
+section article.tablero h2
+{
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+}
+
+section article.tablero div.jugadas
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5px;
+    gap: 5px;
+}
+
+section article.tablero div.jugadas div.numero,
+section article.tablero div.jugadas div.numeroIGUAL
+{
+    background-color: rgb(200, 206, 214);
+    border: 1px dashed grey;
+    padding: 10px;
+    font-size: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+section article.tablero div.jugadas div.numero span.DatoNro,
+section article.tablero div.jugadas div.numeroIGUAL span.DatoNro
+{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+section article.tablero div.jugadas div.numero span.DatoComp,
+section article.tablero div.jugadas div.numeroIGUAL span.DatoComp
+{
+    font-weight: normal;
+    font-size: 12px;
+}
+
+section article.tablero div.jugadas div.numeroIGUAL
+{
+    background-color: aquamarine;
+    border: 1px solid #088cad;
+}
+
+footer 
+{
+    border: 1px solid black;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 10px;
+}
+
+footer.inicial
+{
+    border-color: pink;
+}
+
+footer.nuevo
+{
+    border-color: black;
+}
+
+footer.ganador
+{
+    border-color: greenyellow;
+}
+
+footer.empate
+{
+    border-color: lightgray;
+}
+
+footer.perdedor
+{
+    border-color: red;
+}
+
+footer h2
+{
+    background-color: black;
+    color: white;
+
+    padding: 8px;
+    margin-bottom: 5px;
+}
+
+footer.inicial h2
+{
+    color: black;
+    background-color: pink;
+}
+
+footer.nuevo h2
+{
+    color: white;
+    background-color: black;
+}
+
+footer.empate h2
+{
+    color: black;
+    background-color: lightgray;
+}
+
+footer.ganador h2
+{
+    color: black;
+    background-color: greenyellow;
+}
+
+footer.perdedor h2
+{
+    color: black;
+    background-color: red;
+}
+
+footer div.botones
+{
+    margin: 5px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer div.botones div.boton
+{
+    background-color: blue;
+    color: white;
+    padding: 10px;
+
+    border-radius: 15px;
+}
+
+footer div.botones div.boton#arriesgarB
+{
+    background-color: #CF0F47;    
+}
+
+footer div.botones div.boton#limiteB
+{
+    background-color: #6F826A;    
+}
+
+footer p
+{
+    margin: 5px 0 0 10px;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="juego.js" defer onload="inicializar()"></script>
+    <title>Mayor o menor</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <span class="m1">&lt;</span> <span class="m2">&lt;</span> <span class="m3">&lt;</span>  
+            <span class="may">MAYOR</span>
+            <span class="mao">o</span>
+            <span class="men">menor</span>
+            <span class="m3">&gt;</span> <span class="m2">&gt;</span> <span class="m1">&gt;</span>  
+        </h1>
+    </header>
+
+    <section>
+        <article class="tablero">
+            <h2>Humano</h2>
+            <div id="jugadas1" class="jugadas">
+                <div id="nh1" class="numeroIGUAL">
+                    <span class="DatoNro" id="nh1Val">9999</span>
+                    <span class="DatoComp" id="nh1Comp">Mayor</span>
+                </div>
+
+            </div>
+        </article>
+
+        <article class="tablero">
+            <h2>Computadora (método de búsqueda binario)</h2>
+            <div id="jugadas2" class="jugadas">
+                <div id="nc1" class="numero">
+                    <span class="DatoNroFAL">9999</span>
+                    <span class="DatoCompFAL">Mayor</span>
+                    <span class="DatoNro">9999</span>
+                    <span class="DatoComp">Mayor</span>
+                </div>
+
+            </div>
+        </article>
+
+    </section>
+    
+    <footer id="opciones" class="inicial">
+        <h2 id="tituloOP">Esperando a que inicies la partida</h2>
+        <p id="mensajeRango">Debés adivinar un número entre 0 y 2000, antes que lo haga la computadora.</p>
+        <p id="mensajeInt">Tendrás 20 intentos como máximo</p>
+        <div class="botones">
+            <div id ="limiteB" class="boton" onclick="modificarLim()">Modificar límite</div>
+            <div id ="nuevoB" class="boton" onclick="nuevoJuego()">Nueva partida</div>
+            <div id="arriesgarB" class="boton" onclick="arriesgarNro()">Arriesgar número</div>
+        </div>
+    </footer>
+</body>
+
+</html>
