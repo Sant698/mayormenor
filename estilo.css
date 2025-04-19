@@ -243,6 +243,12 @@ footer div.botones div.boton#limiteB
     background-color: #6F826A;    
 }
 
+footer div.botones div.boton#cerrarB
+{
+    background-color: black;
+    color: white;    
+}
+
 footer p
 {
     margin: 5px 0 0 10px;

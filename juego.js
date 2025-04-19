@@ -45,7 +45,9 @@ function inicializar()
     document.getElementById("opciones").className = "inicial";
     
     document.getElementById("limiteB").style.display = "block";
+    document.getElementById("nuevoB").style.display = "block";
     document.getElementById("arriesgarB").style.display = "none";
+    document.getElementById("cerrarB").style.display = "none";
 
     document.getElementById("tituloOP").innerText = "Esperando a que inicies la partida";
     document.getElementById("mensajeRango").innerText = "Tendrás que adivinar un número entre " + limiteI + " y " + limiteS + ", antes de que lo haga la computadora, para ganar la partida.";
@@ -67,6 +69,8 @@ function nuevoJuego()
     document.getElementById("opciones").className = "nuevo";
 
     document.getElementById("limiteB").style.display = "none";
+    document.getElementById("nuevoB").style.display = "none";
+    document.getElementById("cerrarB").style.display = "block";
     document.getElementById("arriesgarB").style.display = "block";
 
     document.getElementById("tituloOP").innerText = "¡¡ Nuevo Juego !!";
@@ -111,7 +115,7 @@ function mostrarOcultos()
 function mostrarBotonesF()
 {
     document.getElementById("arriesgarB").style.display = "none";
-    document.getElementById("limiteB").style.display = "block";
+    document.getElementById("cerrarB").style.display = "block";
 }
 
 function veredicto(numeroH, numeroC, nh, nc, datoComp, datoComp2)
