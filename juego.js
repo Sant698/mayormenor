@@ -48,6 +48,10 @@ function inicializar()
     document.getElementById("nuevoB").style.display = "block";
     document.getElementById("arriesgarB").style.display = "none";
     document.getElementById("cerrarB").style.display = "none";
+    document.getElementById("busquedaB").style.display = "none";
+
+    document.getElementById("busquedaBin").style.display = "none";
+    document.getElementById("registros").innerHTML = ""; //Limpiar el registro
 
     document.getElementById("tituloOP").innerText = "Esperando a que inicies la partida";
     document.getElementById("mensajeRango").innerText = "Tendrás que adivinar un número entre " + limiteI + " y " + limiteS + ", antes de que lo haga la computadora, para ganar la partida.";
@@ -72,21 +76,11 @@ function nuevoJuego()
     document.getElementById("nuevoB").style.display = "none";
     document.getElementById("cerrarB").style.display = "block";
     document.getElementById("arriesgarB").style.display = "block";
+    document.getElementById("busquedaB").style.display = "none";
 
     document.getElementById("tituloOP").innerText = "¡¡ Nuevo Juego !!";
     document.getElementById("mensajeRango").innerText = "Tenés que adivinar un número entre " + limiteI + " y " + limiteS + ", antes de que lo haga la computadora, para ganar la partida.";
     document.getElementById("mensajeInt").innerText = "Usaste 0 de " + MAXIMO_INT + " intentos.";
-}
-
-//Genera el aleatorio que va a arriesgar la computadora (usando búsqueda binaria)
-function generaAleatorioC()
-{
-    let apuntado =  Math.floor((punteroI + punteroS) / 2); //Búsqueda binaria
-    if (apuntado > nSecreto)
-        punteroS = apuntado;
-    if (apuntado < nSecreto)
-        punteroI = apuntado;
-    return apuntado;
 }
 
 //Mostrar los números ocultos de la computadora al jugador
@@ -116,6 +110,7 @@ function mostrarBotonesF()
 {
     document.getElementById("arriesgarB").style.display = "none";
     document.getElementById("cerrarB").style.display = "block";
+    document.getElementById("busquedaB").style.display = "block";
 }
 
 function veredicto(numeroH, numeroC, nh, nc, datoComp, datoComp2)
@@ -196,7 +191,22 @@ function veredicto(numeroH, numeroC, nh, nc, datoComp, datoComp2)
 
 function busquedaBinaria()
 {
-    return Math.floor((punteroI + punteroS) / 2);
+    let calculo = (punteroI + punteroS) / 2; //Cálculo
+    let apuntado =  Math.floor(calculo);  //Redondeo hacia abajo
+
+    //Se apunta en los registros la lógica usada
+    let r = document.createElement("li");
+    r.innerText = "Límite inferior: " + punteroI + ", Límite superior: " + punteroS + ". Sumamos límites y dividimos por dos: " + calculo + " (redondeado es: " + apuntado + ").";
+    console.log("Límite inferior: " + punteroI + ", Límite superior: " + punteroS + ". Sumamos límites y dividimos por dos: " + calculo + " (redondeado es: " + apuntado + ").");
+    document.getElementById("registros").appendChild(r);
+
+    if (apuntado > nSecreto)
+        punteroS = apuntado;
+    if (apuntado < nSecreto)
+        punteroI = apuntado;
+    
+    return apuntado; 
+    //return Math.floor((punteroI + punteroS) / 2);
 }
 
 function arriesgarNro()
@@ -292,3 +302,10 @@ function arriesgarNro()
         return;
     }
 }
+
+function mostrarBusqueda()
+{
+    document.getElementById("busquedaB").style.display = "none";
+    document.getElementById("busquedaBin").style.display = "block";
+}
+

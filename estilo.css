@@ -91,6 +91,29 @@ section article.tablero
     min-height: 150px;
 }
 
+section article.tablero#busquedaBin
+{
+    display: none;
+}
+
+section article.tablero#busquedaBin h2
+{
+    border-bottom: 1px solid #FFA55D;
+    color: #FFA55D;
+    margin-bottom: 10px;
+}
+
+section article.tablero#busquedaBin ul
+{
+    list-style: square;
+    padding-left: 50px;
+}
+
+section article.tablero#busquedaBin ul li
+{
+    margin-bottom: 5px;
+}
+
 section article.tablero h2
 {
     border-bottom: 1px solid black;
